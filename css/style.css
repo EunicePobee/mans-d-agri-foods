@@ -379,25 +379,37 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    padding-left: 10rem;
+    /* padding-left: 10rem; */
+    justify-content: center; /* Center-align the content */
+    gap: 2rem; /* Add consistent spacing between items */
+    padding: 2rem 1rem; /* Add padding for smaller screens */
+    margin: 0 auto; /* Center the section horizontally */
+    max-width: 1200px; /* Limit the width for large screens */
+
 }
 
 figure.snip1390 {
     font-family: 'Roboto', Arial, sans-serif;
     position: relative;
     overflow: hidden;
-    margin: 10px;
+    /* margin: 10px; */
     min-width: 230px;
     max-width: 315px;
     width: 100%;
     color: #000000;
     text-align: center;
     font-size: 16px;
+    border-radius: 10px;
     background-color: rgb(19, 70, 19);
     padding: 30px;
     background-image: linear-gradient(-25deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+}
+
+figure.snip1390:hover {
+    transform: scale(1.05); /* Add a slight hover effect */
 }
 
 figure.snip1390 *,
@@ -455,8 +467,10 @@ figure.snip1390 blockquote:before {
 }
 
 figure.snip1390 .profile {
-    width: 100px;
+    width: 80px;
+    height: 80px; /* Ensure square images */
     border-radius: 50%;
+    object-fit: cover; /* Maintain aspect ratio and crop */
     display: inline-block;
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
     margin-bottom: 10px;
@@ -722,8 +736,12 @@ footer {
     .about-us p {
         font-size: 3vw;
         align-content: center;
-        padding-left: 8rem;
-        padding-right: 5rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .slide p {
+        text-align: center;
     }
 
     .offerings h2 {
@@ -770,6 +788,17 @@ footer {
         grid-template-columns: 1fr;
         /* 1 column for mobile devices */
     }
+
+    /* .testimonials {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 1rem; 
+    }
+
+    figure.snip1390 {
+        max-width: 90%; 
+        padding: 20px; 
+    } */
 
     .footer-container {
         flex-direction: column;
