@@ -1,0 +1,783 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: white;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar {
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-branding {
+    color: black;
+    font-family: cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
+}
+
+.nav-link {
+    transition: 0.7s ease;
+    font-weight: bold;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+}
+
+.nav-link:hover {
+    color: green;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+
+#bg-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    width: 80rem;
+    padding: 24px 0;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    /* Center the button horizontally */
+    align-items: center;
+    margin: 2rem auto;
+    /* Add space around the button */
+}
+
+.btn {
+    color: black;
+    background-color: green;
+    text-decoration: none;
+    padding: 10px 26px;
+    border-radius: 2rem;
+    border: 2px solid white;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Smooth hover effect */
+}
+
+.btn a {
+    text-decoration: none;
+    /* color: white; */
+    display: block;
+    /* Make anchor fill the button */
+}
+
+.btn a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.btn:hover {
+    background-color: rgb(39, 90, 39);
+    color: green;
+    transform: scale(1.05);
+    /* Slight scaling for hover */
+}
+
+.about-us h2 {
+    align-content: center;
+    /* padding-left: 35rem; */
+    padding-top: 5rem;
+    font-size: 3vw;
+    font-weight: bolder;
+    text-align: center;
+    /* padding-right: 35rem; */
+    /* font-weight: bold; */
+}
+
+.about-us h3 {
+    align-content: center;
+    /* padding-left: 35rem; */
+    padding-top: 5rem;
+    font-size: 2.5vw;
+    font-weight: bolder;
+    text-align: center;
+    /* padding-right: 35rem; */
+    /* font-weight: bold; */
+}
+
+
+.about-us p {
+    font-size: 2vw;
+    align-content: center;
+    padding-left: 8rem;
+    padding-right: 5rem;
+}
+
+#slider {
+    height: 500px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 5rem;
+    margin-right: 3rem; */
+}
+
+.container {
+    width: 1600px;
+    margin: auto;
+}
+
+.subcontainer {
+    width: 85%;
+    margin: auto;
+}
+
+.slide-img {
+    width: 100%;
+    height: 275px;
+    border-radius: 5px;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.slide-img:hover {
+    box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.9) inset;
+}
+
+.slide-img a {
+    opacity: 0;
+    text-decoration: none;
+    transform: scale(0);
+    transition: 0.8s;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.slide-img:hover a {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.img-1 {
+    background-image: url(https://images.pexels.com/photos/13519431/pexels-photo-13519431.jpeg);
+}
+
+.img-2 {
+    background-image: url(https://t3.ftcdn.net/jpg/10/57/79/54/360_F_1057795423_2R87f9A9jvAk4rPcRXSqbm23eoK1OlRI.jpg);
+}
+
+.img-3 {
+    background-image: url(https://media.istockphoto.com/id/1389848476/photo/cropped-shot-of-a-farmer-holding-soil.jpg?s=612x612&w=0&k=20&c=RsoyAqNfB3_C3NqjDgcIXkp1jUq2O1KZMm7QU4KMFhE=);
+}
+
+.img-4 {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/034/502/960/non_2x/group-of-diverse-people-holding-hands-together-on-black-background-closeup-stack-of-hands-showing-unity-and-teamwork-ai-generated-free-photo.jpg);
+}
+
+.img-5 {
+    background-image: url(https://i.pinimg.com/736x/22/37/22/22372210018e17f62a042adc59504cfa.jpg);
+}
+
+.img-6 {
+    background-image: url(https://img.freepik.com/premium-photo/black-family-managing-local-grocery-store-interacting-with-happy-customers_868783-49289.jpg);
+}
+
+.offerings h2 {
+    align-content: center;
+    /* padding-left: 35rem; */
+    padding-top: 5rem;
+    font-size: 3vw;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.offerings h3 {
+    align-content: center;
+    /* padding-left: 35rem; */
+    padding-top: 1rem;
+    font-size: 2.5vw;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.services h3 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#slider2 {
+    height: 500px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container2 {
+    width: 1600px;
+    margin: auto;
+}
+
+.subcontainer2 {
+    width: 85%;
+    margin: auto;
+}
+
+.slide2 {
+    font-size: 2vw;
+    text-align: center;
+}
+
+.slide-img2 {
+    width: 100%;
+    height: 275px;
+    border-radius: 5px;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.slide-img2:hover {
+    box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.9) inset;
+}
+
+.slide-img2 a {
+    opacity: 0;
+    text-decoration: none;
+    transform: scale(0);
+    transition: 0.8s;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.slide-img2:hover a {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.img-7 {
+    background-image: url(https://t4.ftcdn.net/jpg/06/94/11/51/360_F_694115135_k7XnefcaE6ShzYcJ9KFU0gXdXa1idAhw.jpg);
+}
+
+.img-8 {
+    background-image: url(https://www.dehydratedveg.com/images/dried-tomato-flakes-5-5mm.jpeg);
+}
+
+.img-9 {
+    background-image: url(https://israelagri.com/wp-content/uploads/2022/06/image.jpg);
+}
+
+.img-10 {
+    background-image: url(https://farmher.com/wp-content/uploads/2024/04/carrots_adobe-stock.webp);
+}
+
+.img-11 {
+    background-image: url(https://www.thetutuguru.com.au/wp-content/uploads/2019/09/spring-onion-2.jpg);
+}
+
+.img-12 {
+    background-image: url(https://greenpointdist.com/wp-content/uploads/01_GreenBell-Pepper.png);
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+    margin: auto 2rem;
+}
+
+.parent h4 {
+    font-size: 1.8vw;
+    font-weight: 100;
+}
+
+.parent div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parent img {
+    width: 100%;
+    /* Ensures images fill the grid items */
+    height: 400px;
+    /* Maintains aspect ratio */
+    object-fit: cover;
+    /* Ensures the image fills the area without stretching */
+    border-radius: 8px;
+    /* Adds rounded corners to images */
+}
+
+.training h4 {
+    margin-bottom: 2rem;
+    font-size: 2vw;
+}
+
+.consultancy h4 {
+    margin-bottom: 2rem;
+    font-size: 2vw;
+}
+
+#test-hg {
+    align-content: center;
+    padding-top: 5rem;
+    font-size: 2.5vw;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 10rem;
+}
+
+figure.snip1390 {
+    font-family: 'Roboto', Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    min-width: 230px;
+    max-width: 315px;
+    width: 100%;
+    color: #000000;
+    text-align: center;
+    font-size: 16px;
+    background-color: rgb(19, 70, 19);
+    padding: 30px;
+    background-image: linear-gradient(-25deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+figure.snip1390 *,
+figure.snip1390 *:before,
+figure.snip1390 *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+figure.snip1390 figcaption {
+    width: 100%;
+}
+
+figure.snip1390 h2,
+figure.snip1390 h4,
+figure.snip1390 blockquote {
+    margin: 0;
+}
+
+figure.snip1390 h2,
+figure.snip1390 h4 {
+    font-weight: 300;
+}
+
+figure.snip1390 h2 {
+    color: #ffffff;
+}
+
+figure.snip1390 h4 {
+    color: #a6a6a6;
+}
+
+figure.snip1390 blockquote {
+    font-size: 1em;
+    padding: 45px 20px 40px 50px;
+    margin-top: 30px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: inset -1.4px -1.4px 2px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    position: relative;
+}
+
+figure.snip1390 blockquote:before {
+    font-family: 'FontAwesome';
+    content: "\201C";
+    position: absolute;
+    font-size: 70px;
+    opacity: 0.25;
+    font-style: normal;
+    top: 0px;
+    left: 20px;
+}
+
+figure.snip1390 .profile {
+    width: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px;
+    border: solid 5px #A6A57A;
+}
+
+.contact {
+    margin-top: 2rem;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: var(--bottom-margin-2);
+    padding-top: 5rem;
+    font-size: 30px;
+    align-content: center;
+    padding-bottom: 2rem;
+}
+
+.contact-form-container {
+    max-width: 40.75rem;
+    margin: 20px auto;
+    padding: 0.938rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px #a17a69;
+}
+
+.contact-form-container label {
+    line-height: 2.7em;
+    font-weight: var(--bold-font);
+    color: black;
+}
+
+
+.contact-form-container textarea {
+    min-height: 6.25rem;
+    font-size: 14px;
+}
+
+.contact-form-container .input-field {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    border: 2px outset black;
+    font-size: 0.875rem;
+    outline: none;
+}
+
+/* .form-control label {
+    font-weight: 400;
+} */
+
+.input-field::placeholder {
+    padding: 0.5rem;
+    color: black;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: var(--bold-font);
+    transition: var(--transition);
+}
+
+.submit-btn:hover {
+    background-color: green;
+    border: 2px solid green;
+    cursor: pointer;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 1%;
+    bottom: 50%;
+}
+
+.socicon {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* General Footer Styling */
+footer {
+    background-color: rgb(19, 70, 19);
+    /* Dark Blue Background */
+    color: #FFFFFF;
+    /* White Text */
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Footer Sections */
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    /* Ensures good spacing on smaller screens */
+}
+
+.footer-section h3,
+.footer-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: red;
+    /* Orange Highlight for Headings */
+}
+
+.footer-section p,
+.footer-section li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    /* Align icons and text at the top */
+    gap: 8px;
+    /* Add spacing between the icon and the text */
+}
+
+.footer-section ul li strong {
+    display: inline-block;
+    max-width: 200px;
+    /* Set a consistent max width for text */
+    line-height: 1.5;
+    /* Add spacing between text lines */
+    word-wrap: break-word;
+    /* Wrap long text to the next line */
+}
+
+.footer-section a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: red;
+    /* Highlight links on hover */
+}
+
+/* SDGs Section Styling */
+.footer-section ul li::before {
+    content: "✔️";
+    /* Checkmark Icon */
+    margin-right: 8px;
+    color: red;
+    /* Red checkmark */
+    font-size: 0.9rem;
+}
+
+.footer-section ul li a {
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #cc7054;
+    /* Light Red Border */
+    padding-top: 15px;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #B2BABB;
+}
+
+.footer-bottom a {
+    color: red;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        /* Reduce padding */
+        font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .about-us h2 {
+        align-content: center;
+        padding-top: 5rem;
+        font-size: 4vw;
+        font-weight: bolder;
+        text-align: center;
+    } 
+
+    .about-us h3 {
+        align-content: center;
+        padding-top: 5rem;
+        font-size: 3.5vw;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    .about-us p {
+        font-size: 3vw;
+        align-content: center;
+        padding-left: 8rem;
+        padding-right: 5rem;
+    }
+
+    .offerings h2 {
+        align-content: center;
+        padding-top: 5rem;
+        font-size: 5vw;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    .offerings h3 {
+        align-content: center;
+        padding-top: 1rem;
+        font-size: 4.5vw;
+        font-weight: bolder;
+        text-align: center;
+    } 
+
+    .training h4 {
+        margin-bottom: 2rem;
+        font-size: 3vw;
+    }
+    
+    .consultancy h4 {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        font-size: 3vw;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .container2 {
+        width: 100%;
+    }
+
+    .slide2 {
+        font-size: 3vw;
+        text-align: center;
+    }
+
+    .parent {
+        grid-template-columns: 1fr;
+        /* 1 column for mobile devices */
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
